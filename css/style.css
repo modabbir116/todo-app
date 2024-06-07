@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+.main_div{
+    width: 550px;
+    background-color: darkgray;
+    padding: 20px;
+    margin: 80px auto;
+}
+.input_fill input{
+    outline: none;
+    border: 1px solid turquoise;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+}
+.input_fill button{
+    outline: none;
+    border: 1px solid turquoise;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    margin-left: 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.input_fill input::placeholder{
+    color: rgb(94, 94, 94);
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.input_fill .error{
+    color: red;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding-top: 5px;
+}
+.menu {
+    margin-top: 30px;
+}
+.menu .listItem{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+    
+}
+.menu .listItem li{
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    position: relative;
+    padding-bottom: 5px;
+}
+.menu .listItem li button{
+   border: none;
+   outline: none;
+   background-color: transparent;
+   color: #fff;
+   font-size: 20px;
+   cursor: pointer;
+   /* position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    cursor: pointer; */
+
+}
