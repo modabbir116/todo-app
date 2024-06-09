@@ -6,6 +6,8 @@ let listItem = document.querySelector(".listItem");
 let todoArr = [];
 
 let arrIndex ;
+console.log(arrIndex);
+// console.log(arrIndex[index]);
 
 btn.addEventListener("click", () =>{
     if(!inputBox.value){
@@ -14,14 +16,15 @@ btn.addEventListener("click", () =>{
     }else{
         error.innerHTML = "";
         inputBox.style.border = '';
-        if(btn.innerHTML === "Add"){
+        if(btn.innerHTML.toLocaleLowerCase() === "add"){
             todoArr.push(inputBox.value);
             todo()
             inputBox.value = ""
         }else{
             todoArr[arrIndex] = inputBox.value;
+            console.log(todoArr[arrIndex] = inputBox.value);
             todo()
-            btn.innerHTML = "add"
+            btn.innerHTML = "Add"
             inputBox.value = ""
             error.innerHTML = "";
             inputBox.style.border = '';
@@ -53,9 +56,11 @@ const todo = () =>{
         let editBtnArr = Array.from(editBtn);
         editBtnArr.map((editItem, index) =>{
             editItem.addEventListener("click", function(){
+                arrIndex = index
                 btn.innerHTML = "update";
                 inputBox.value = todoArr[index]
-                arrIndex = index
+                // console.log(todoArr[index]);
+                
             })
         })
         // Edit operation end
